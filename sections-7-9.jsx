@@ -367,7 +367,7 @@ function FooterCTA() {
           lineHeight: 0.95, color: T.bg,
           letterSpacing: '-0.035em', marginBottom: 44,
         }}>
-          Athens.<br />June 30.<br />That's where<br />we find out.
+          Athens.<br />June 30.<br />Where Europe's<br />AI edge gets built.
         </h2>
 
         {/* href: replace with Luma registration URL when available */}

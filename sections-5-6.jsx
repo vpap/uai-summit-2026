@@ -2,26 +2,52 @@
 
 const SCHEDULE = [
   // Morning
-  { time: '08:00', type: 'BRK',  title: 'Arrival & Networking Breakfast',                       phase: 0 },
-  { time: '09:15', type: 'OPEN', title: 'Opening block — organizers, Greek official, US Ambassador', phase: 0 },
-  { time: '09:50', type: 'KEY',  title: 'Bertsimas — Personalized medicine & ML',                phase: 0 },
-  { time: '10:30', type: 'KEY',  title: 'Kellis — Mantis: the latent map of biological knowledge', phase: 0 },
-  { time: '11:10', type: 'KEY',  title: 'Evgeniou — Chemistry in 1900, and AI in 2026',         phase: 0 },
-  { time: '11:50', type: 'BRK',  title: 'Morning Coffee & Networking',                           phase: 0 },
-  // Midday
-  { time: '12:00', type: 'PNL',  title: 'Panel: AI across regulated borders',                    phase: 1 },
-  { time: '12:40', type: 'PNL',  title: 'Panel: The Universal AI curriculum — one year in',      phase: 1 },
-  { time: '13:25', type: 'BRK',  title: 'Networking Lunch — topic tables, meeting marketplace',  phase: 1 },
-  { time: '14:40', type: 'KEY',  title: "Physical AI and Europe's Industrial Edge",              phase: 1 },
-  { time: '15:20', type: 'KEY',  title: 'The European Scale-Up Equation',                        phase: 1 },
-  { time: '16:00', type: 'KEY',  title: 'Building at scale outside the Silicon Valley default',  phase: 1 },
-  { time: '16:40', type: 'BRK',  title: 'Afternoon Coffee & Networking',                         phase: 1 },
-  // Late afternoon
-  { time: '16:50', type: 'KEY',  title: 'AI Literacy at Continental Scale',                      phase: 2 },
-  { time: '17:30', type: 'KEY',  title: 'Closing session — flex',                                phase: 2 },
-  { time: '18:10', type: 'DEMO', title: 'Demo Day — 10 startups · 5 minutes each',              phase: 2 },
-  { time: '19:05', type: 'AWRD', title: 'Awards Ceremony',                                       phase: 2 },
-  { time: '19:20', type: 'BRK',  title: 'Networking Reception (100 min)',                        phase: 2 },
+  { time: '08:30', type: 'BRK',  title: 'Registration & Welcome Coffee',                                            phase: 0 },
+  { time: '09:30', type: 'OPEN', title: 'Welcome — StartSmart SEE + MIT Open Learning',                             phase: 0,
+    speaker: 'Gerassimos Spyridakis · Spheric Capital  /  Kathleen Kennedy · MIT Open Learning',
+    about:   'StartSmart SEE and MIT Open Learning open the day and set the agenda.' },
+  { time: '09:40', type: 'KEY',  title: "Fireside: Europe's AI scaling moment — Kyriakos Pierrakakis",              phase: 0,
+    speaker: 'Kyriakos Pierrakakis · Minister of Digital Governance, Greece',
+    about:   "Fireside. The regulatory stack as a competitive signal — not a burden. Sets the day's thesis." },
+  { time: '10:15', type: 'KEY',  title: 'Fireside: Kathleen Kennedy — The deep ontology of work',                   phase: 0,
+    speaker: 'Kathleen Kennedy · MIT Open Learning / MIT CCI',
+    about:   "Fireside. The Malone 'Deep Ontology of Work' paper and what AI-driven workforce transformation actually requires." },
+  { time: '10:45', type: 'BRK',  title: 'Coffee Break',                                                             phase: 0 },
+  { time: '11:05', type: 'PNL',  title: 'Panel: AI across regulated borders — financial services as the test case', phase: 0,
+    speaker: 'Nikos Andrikogiannopoulos · Metrika  +  panelists TBC',
+    about:   'Panel. AI in financial services as the live experiment for European market integration — compliance, interoperability, and the real costs of fragmentation.' },
+  { time: '11:55', type: 'KEY',  title: 'Fireside: Building a global security company from Tel Aviv — Wiz',         phase: 0,
+    speaker: 'Wiz executive TBC',
+    about:   'Fireside. Building a cybersecurity hyperscaler outside the US — what the Google acquisition proves, and how AI is reshaping enterprise security.' },
+  { time: '12:30', type: 'PNL',  title: 'Panel: The Universal AI curriculum in Greek — one year in',                phase: 0,
+    speaker: 'Kathleen Kennedy (moderator)  +  Eugenides / Bodossaki / NTUA representatives',
+    about:   'Panel. Specific learner numbers, completion rates, and institutional uptake — what the Greek deployment of the MIT UAI curriculum taught us in year one.' },
+  // Afternoon
+  { time: '13:15', type: 'BRK',  title: 'Lunch',                                                                    phase: 1 },
+  { time: '14:15', type: 'DEMO', title: 'Demo Day — StartSmart SEE Acceleration 2026 · 10 startups · 5 min each',   phase: 1,
+    speaker: '10 startups selected for the StartSmart SEE Acceleration 2026',
+    about:   'Demo Day. 10 startups × 5 minutes each, pitches only — no judging on stage. The room shifts from listening to evaluating.' },
+  { time: '15:20', type: 'KEY',  title: 'Fireside: The deployment surface is already built — Colin Angle',          phase: 1,
+    speaker: 'Colin Angle · Co-founder, iRobot',
+    about:   "Fireside. Europe's industrial base — factories, ports, grids, maritime — as the deployment surface for physical AI. The weight becomes the advantage." },
+  { time: '15:55', type: 'PNL',  title: 'Panel: Building the physical, in half the time — AI in construction',      phase: 1,
+    speaker: 'Hill International executive  +  developer, proptech founder, academic panelists TBC',
+    about:   'Panel. AI in property development and construction — how active European projects are cutting timelines, and what remains stubbornly hard.' },
+  { time: '16:40', type: 'BRK',  title: 'Coffee Break',                                                             phase: 1 },
+  // Evening
+  { time: '17:00', type: 'PNL',  title: 'Panel: What we can and cannot see — AI security & interpretability',       phase: 2,
+    speaker: 'Panelists TBC — interpretability researchers, security operators, regulators',
+    about:   'Panel. Interpretability, enterprise security, and AI regulation as one continuous conversation — no "what is AI?" setup.' },
+  { time: '17:50', type: 'PNL',  title: 'Panel: Data centers, grids, and the price of European sovereignty',        phase: 2,
+    speaker: 'Roman Chernin · Nebius  +  energy, policy, and infrastructure panelists TBC',
+    about:   'Panel. The infrastructure reality behind European AI ambition — data centers, power grids, and who actually controls the stack.' },
+  { time: '18:40', type: 'KEY',  title: 'Closing Fireside: The Europe that competes',                               phase: 2,
+    speaker: 'TBC — Anu Bradford, Sanjay Sarma, or European founder with global scaling story',
+    about:   'Fireside. Synthesis across the day — the Europe that competes, and what it takes to build it from here.' },
+  { time: '19:10', type: 'OPEN', title: 'Close — StartSmart SEE + MIT Open Learning',                               phase: 2,
+    speaker: 'Vassilis Papakonstantinou · Blue Dome Capital  /  Kathleen Kennedy · MIT Open Learning',
+    about:   'Closing remarks and 2027 preview.' },
+  { time: '19:15', type: 'BRK',  title: 'Networking Reception',                                                     phase: 2 },
 ];
 
 const TAG = {
@@ -34,45 +60,98 @@ const TAG = {
 };
 
 const PHASES = [
-  { label: 'Morning — Inspiration & framing',    rows: SCHEDULE.filter(r => r.phase === 0) },
-  { label: 'Midday — Depth & application',        rows: SCHEDULE.filter(r => r.phase === 1) },
-  { label: 'Late afternoon — Community & action', rows: SCHEDULE.filter(r => r.phase === 2) },
+  { label: 'Morning — Thesis & platform',       rows: SCHEDULE.filter(r => r.phase === 0) },
+  { label: 'Afternoon — Deployment & scale',    rows: SCHEDULE.filter(r => r.phase === 1) },
+  { label: 'Evening — Governance & synthesis',  rows: SCHEDULE.filter(r => r.phase === 2) },
 ];
 
-// Hover handled by .schedule-row / .schedule-row--dim CSS — no useState needed
 function ScheduleRow({ row }) {
-  const t   = TAG[row.type] || TAG.OPEN;
-  const dim = row.type === 'BRK';
+  const [open, setOpen] = React.useState(false);
+  const t           = TAG[row.type] || TAG.OPEN;
+  const dim         = row.type === 'BRK';
+  const interactive = !dim && !!row.speaker;
+
   return (
-    <div
-      className={`schedule-row${dim ? ' schedule-row--dim' : ''}`}
-      style={{
-        display: 'grid', gridTemplateColumns: '64px 52px 1fr 20px',
-        gap: 20, alignItems: 'center',
-        padding: '13px 8px', margin: '0 -8px',
-        borderBottom: `1px solid ${T.bg2}`,
-      }}
-    >
-      <span style={{ fontFamily: T.mono, fontSize: 13, color: T.txt }}>{row.time}</span>
+    <div style={{
+      borderBottom: `1px solid ${T.bg2}`,
+      opacity: dim ? 0.5 : 1,
+    }}>
+      {/* Header */}
+      <div
+        onClick={interactive ? () => setOpen(o => !o) : undefined}
+        style={{
+          display: 'grid', gridTemplateColumns: '64px 52px 1fr 20px',
+          gap: 20, alignItems: 'center',
+          padding: '13px 8px', margin: '0 -8px',
+          background: open ? T.bg2 : 'transparent',
+          transition: 'background 0.15s',
+          cursor: interactive ? 'pointer' : 'default',
+        }}
+      >
+        <span style={{ fontFamily: T.mono, fontSize: 13, color: T.txt }}>{row.time}</span>
 
-      {!dim
-        ? <span style={{
-            fontFamily: T.mono, fontSize: 9,
-            letterSpacing: '0.06em', textTransform: 'uppercase',
-            padding: '4px 7px', background: t.bg, color: t.fg,
-            border: t.bg === 'transparent' ? `1px solid ${T.bg2}` : 'none',
-            whiteSpace: 'nowrap',
-          }}>{t.label}</span>
-        : <span></span>
-      }
+        {!dim
+          ? <span style={{
+              fontFamily: T.mono, fontSize: 9,
+              letterSpacing: '0.06em', textTransform: 'uppercase',
+              padding: '4px 7px', background: t.bg, color: t.fg,
+              border: t.bg === 'transparent' ? `1px solid ${T.bg2}` : 'none',
+              whiteSpace: 'nowrap',
+            }}>{t.label}</span>
+          : <span></span>
+        }
 
-      <span style={{
-        fontFamily: T.body, fontSize: 15,
-        color: dim ? 'rgba(26,24,22,0.45)' : T.txt,
-      }}>{row.title}</span>
+        <span style={{
+          fontFamily: T.body, fontSize: 15,
+          color: dim ? 'rgba(26,24,22,0.45)' : T.txt,
+        }}>{row.title}</span>
 
-      {!dim && (
-        <span style={{ color: T.pri, fontSize: 16, display: 'inline-block' }}>→</span>
+        {interactive && (
+          <span style={{
+            fontFamily: T.display, fontSize: 20, color: T.pri,
+            lineHeight: 1, display: 'inline-block',
+            transform: open ? 'rotate(45deg)' : 'none',
+            transition: 'transform 0.3s ease',
+          }}>+</span>
+        )}
+      </div>
+
+      {/* Expanded content */}
+      {interactive && (
+        <div style={{
+          maxHeight: open ? '160px' : '0',
+          overflow: 'hidden',
+          transition: 'max-height 0.35s ease',
+          background: T.bg2,
+        }}>
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1fr',
+            gap: 32, padding: '14px 8px 20px',
+          }}>
+            <div>
+              <div style={{
+                fontFamily: T.mono, fontSize: 10,
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                color: T.pri, marginBottom: 6,
+              }}>SPEAKER</div>
+              <div style={{
+                fontFamily: T.body, fontWeight: 600,
+                fontSize: 14, color: T.txt, lineHeight: 1.5,
+              }}>{row.speaker}</div>
+            </div>
+            <div>
+              <div style={{
+                fontFamily: T.mono, fontSize: 10,
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                color: T.pri, marginBottom: 6,
+              }}>ABOUT</div>
+              <div style={{
+                fontFamily: T.body, fontSize: 14,
+                lineHeight: 1.6, color: 'rgba(26,24,22,0.75)',
+              }}>{row.about}</div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
@@ -97,13 +176,13 @@ function Program() {
               fontFamily: T.display, fontWeight: 900,
               fontSize: 'clamp(30px, 3.5vw, 48px)',
               lineHeight: 1.0, color: T.txt, letterSpacing: '-0.025em',
-            }}>One day.<br />Ten sessions.</h2>
+            }}>One day.<br />One track.</h2>
           </div>
           <p style={{
             fontFamily: T.body, fontSize: 16,
             lineHeight: 1.65, color: 'rgba(26,24,22,0.7)',
           }}>
-            Three emotional gears: morning inspiration, midday depth, and a late-afternoon surge of demos, awards, and community. Every content slot is 40 minutes — no padding.
+            Firesides and disciplined panels across three phases: morning thesis, afternoon deployment, evening governance. Keynote, fireside, panel, and demo formats — no filler.
           </p>
         </div>
 
