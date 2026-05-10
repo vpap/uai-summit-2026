@@ -6,17 +6,26 @@
   <title>MIT Universal AI Summit 2026 · Athens</title>
   <meta name="description" content="One day. Five European boundaries. The case — and the proof. June 30, 2026 · Athens College Theater." />
 
-  <!-- Social / SEO -->
-  <link rel="canonical" href="https://uaisummit.gr" />
+  <!-- Social / SEO — domain-free; filled at runtime by the inline script below -->
+  <link rel="canonical" />
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://uaisummit.gr" />
+  <meta property="og:url"         content="" />
   <meta property="og:title"       content="MIT Universal AI Summit 2026 · Athens" />
   <meta property="og:description" content="One day. Five European boundaries. The case — and the proof. June 30, 2026 · Athens College Theater." />
-  <meta property="og:image"       content="https://uaisummit.gr/og-image.png" />
+  <meta property="og:image"       content="assets/og-image.png" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="MIT Universal AI Summit 2026 · Athens" />
   <meta name="twitter:description" content="One day. Five European boundaries. The case — and the proof. June 30, 2026 · Athens College Theater." />
-  <meta name="twitter:image"       content="https://uaisummit.gr/og-image.png" />
+  <meta name="twitter:image"       content="assets/og-image.png" />
+  <script>
+    (function() {
+      var o = window.location.origin;
+      document.querySelector('link[rel="canonical"]').href = o;
+      document.querySelector('meta[property="og:url"]').content = o;
+      document.querySelector('meta[property="og:image"]').content = o + '/assets/og-image.png';
+      document.querySelector('meta[name="twitter:image"]').content = o + '/assets/og-image.png';
+    })();
+  </script>
 
   <!-- Favicon — SealMark motif in Cardinal -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><circle cx='30' cy='30' r='27' fill='none' stroke='%238A1326' stroke-width='2'/><circle cx='30' cy='30' r='3.5' fill='%238A1326'/><line x1='30' y1='3' x2='30' y2='57' stroke='%238A1326' stroke-width='1' opacity='.4'/><line x1='3' y1='30' x2='57' y2='30' stroke='%238A1326' stroke-width='1' opacity='.4'/></svg>" />

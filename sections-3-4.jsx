@@ -124,6 +124,14 @@ const SPEAKERS = [
     slot: 'SLOT 01 · 09:50',
     quote: '"Personalized medicine: ML at the lab-to-market boundary."',
     photo: 'bertsimas.png',
+    title: 'Boeing Leaders for Global Operations Professor of Management; Associate Dean, Online Education & AI; Vice Provost for Open Learning',
+    bio: [
+      'Dimitris Bertsimas is the Boeing Leaders for Global Operations Professor of Management, a Professor of Operations Research, and the Associate Dean, Online Education & Artificial Intelligence. He was named Vice Provost for Open Learning in September 2024.',
+      'A faculty member since 1988, his research interests include optimization, stochastic systems, machine learning, and their application. In recent years, he has worked in robust optimization, statistics, healthcare, transportation and finance. Bertsimas was a co-founder of Dynamic Ideas, LLC, which developed portfolio management tools for asset management; in 2002, its assets were sold to American Express. He is also the founder of Dynamic Ideas Press and co-founder of Benefits Science, Dynamic Ideas Financial, Alpha Dynamics, P2 Analytics, and MyA Health.',
+      'Bertsimas has co-authored more than 200 scientific papers and several books, including Introduction to Linear Optimization (with J. Tsitsiklis), Data, Models, and Decisions (with R. Freund), Optimization over Integers (with R. Weismantel), and The Analytics Edge. He has supervised 59 doctoral and 31 Master’s students.',
+      'A member of the National Academy of Engineering and an INFORMS fellow, he has received numerous awards including the Harold Larnder Prize (2016), the Erlang Prize (1996), the SIAM Prize in Optimization (1996), the Bodossaki Prize (1998), and the Presidential Young Investigator Award (1991–1996).',
+      'Bertsimas holds a BS in electrical engineering from the National Technical University of Athens, and an MS and PhD in operations research and applied mathematics from MIT.',
+    ],
   },
   {
     name: 'Manolis\nKellis',
@@ -167,10 +175,104 @@ const SPEAKERS = [
   },
 ];
 
-// Hover handled entirely by .speaker-card / .speaker-slot-tag CSS — no useState needed
-function SpeakerCard({ speaker }) {
+function SpeakerModal({ speaker, onClose }) {
+  React.useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    const onKey = e => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+    };
+  }, []);
+
   return (
-    <div className="speaker-card">
+    <div
+      onClick={onClose}
+      style={{
+        position: 'fixed', inset: 0, zIndex: 400,
+        background: 'rgba(26,24,22,0.75)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: '40px 24px',
+      }}
+    >
+      <div
+        onClick={e => e.stopPropagation()}
+        style={{
+          background: T.bg, maxWidth: 680, width: '100%',
+          maxHeight: '88vh', overflowY: 'auto',
+          position: 'relative', padding: '48px 52px',
+        }}
+      >
+        {/* Close */}
+        <button onClick={onClose} aria-label="Close" style={{
+          position: 'absolute', top: 20, right: 24,
+          background: 'none', border: 'none', cursor: 'pointer',
+          fontFamily: T.body, fontSize: 28, lineHeight: 1, color: T.txt,
+        }}>×</button>
+
+        {/* Header */}
+        <div style={{ display: 'flex', gap: 28, alignItems: 'flex-start', marginBottom: 36 }}>
+          <div style={{
+            width: 180, height: 180, flexShrink: 0,
+            background: T.bg2, overflow: 'hidden', position: 'relative',
+          }}>
+            <img
+              src={`assets/speakers/${speaker.photo}`}
+              alt={speaker.name.replace('\n', ' ')}
+              onError={e => { e.currentTarget.style.display = 'none'; }}
+              style={{
+                width: '100%', height: '100%',
+                objectFit: 'cover', objectPosition: 'center bottom',
+                transform: 'scale(1.5)', transformOrigin: 'center 75%',
+              }}
+            />
+          </div>
+          <div>
+            <div style={{
+              fontFamily: T.display, fontWeight: 900, fontSize: 28,
+              lineHeight: 1.05, color: T.txt, letterSpacing: '-0.02em',
+              whiteSpace: 'pre-line', marginBottom: 8,
+            }}>{speaker.name}</div>
+            {speaker.title && (
+              <div style={{
+                fontFamily: T.body, fontSize: 14,
+                lineHeight: 1.5, color: 'rgba(26,24,22,0.6)',
+              }}>{speaker.title}</div>
+            )}
+            <div style={{
+              fontFamily: T.mono, fontSize: 10,
+              letterSpacing: '0.1em', textTransform: 'uppercase',
+              color: T.pri, marginTop: 8,
+            }}>{speaker.affiliation}</div>
+          </div>
+        </div>
+
+        <div style={{ height: 1, background: T.bg2, marginBottom: 28 }}></div>
+
+        {/* Bio paragraphs */}
+        {(speaker.bio || []).map((para, i) => (
+          <p key={i} style={{
+            fontFamily: T.body, fontSize: 16,
+            lineHeight: 1.75, color: 'rgba(26,24,22,0.82)',
+            marginBottom: i < speaker.bio.length - 1 ? 18 : 0,
+          }}>{para}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Hover handled entirely by .speaker-card / .speaker-slot-tag CSS
+function SpeakerCard({ speaker }) {
+  const [showBio, setShowBio] = React.useState(false);
+  return (
+    <>
+      {showBio && <SpeakerModal speaker={speaker} onClose={() => setShowBio(false)} />}
+    <div className="speaker-card"
+      onClick={speaker.bio ? () => setShowBio(true) : undefined}
+      style={{ cursor: speaker.bio ? 'pointer' : 'default' }}
+    >
       {/* Headshot — loads from assets/speakers/, falls back to placeholder */}
       <div style={{
         height: 210, background: T.bg2,
@@ -223,8 +325,18 @@ function SpeakerCard({ speaker }) {
           fontFamily: T.body, fontStyle: 'italic',
           fontSize: 13, lineHeight: 1.5, color: 'rgba(26,24,22,0.68)',
         }}>{speaker.quote}</div>
+
+        {speaker.bio && (
+          <div style={{
+            marginTop: 14,
+            fontFamily: T.mono, fontSize: 10,
+            letterSpacing: '0.1em', textTransform: 'uppercase',
+            color: T.acc1,
+          }}>READ BIO →</div>
+        )}
       </div>
     </div>
+    </>
   );
 }
 
