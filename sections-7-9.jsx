@@ -79,8 +79,8 @@ function Venue() {
             position: 'relative', overflow: 'hidden',
             minHeight: 400,
           }}>
-            <img src="assets/recap/Moments01.jpg"
-              alt="Speaker at Athens College Theater"
+            <img src="assets/recap/Moments00.jpg"
+              alt="Athens College Theater — UAI Summit 2025"
               style={{
                 position: 'absolute', inset: 0,
                 width: '100%', height: '100%',
