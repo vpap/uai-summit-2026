@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIT Universal AI Summit 2026 · Athens</title>
+  <meta name="description" content="One day. Five European boundaries. The case — and the proof. June 30, 2026 · Athens College Theater." />
+
+  <!-- Social / SEO -->
+  <link rel="canonical" href="https://uaisummit.gr" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://uaisummit.gr" />
+  <meta property="og:title"       content="MIT Universal AI Summit 2026 · Athens" />
+  <meta property="og:description" content="One day. Five European boundaries. The case — and the proof. June 30, 2026 · Athens College Theater." />
+  <meta property="og:image"       content="https://uaisummit.gr/og-image.png" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="MIT Universal AI Summit 2026 · Athens" />
+  <meta name="twitter:description" content="One day. Five European boundaries. The case — and the proof. June 30, 2026 · Athens College Theater." />
+  <meta name="twitter:image"       content="https://uaisummit.gr/og-image.png" />
+
+  <!-- Favicon — SealMark motif in Cardinal -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><circle cx='30' cy='30' r='27' fill='none' stroke='%238A1326' stroke-width='2'/><circle cx='30' cy='30' r='3.5' fill='%238A1326'/><line x1='30' y1='3' x2='30' y2='57' stroke='%238A1326' stroke-width='1' opacity='.4'/><line x1='3' y1='30' x2='57' y2='30' stroke='%238A1326' stroke-width='1' opacity='.4'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,900;1,400;1,900&family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #ECE5D5;
+      color: #1A1816;
+      font-family: 'Archivo', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button { font-family: inherit; }
+
+    /* ── Nav hover ─────────────────────── */
+    .nav-link:hover    { color: #8A1326 !important; }
+    .btn-primary:hover { background: #5C0A1B !important; }
+
+    /* ── Pillar card hover ──────────────── */
+    .pillar-card {
+      background: #DDD3BC;
+      border: 1px solid #DDD3BC;
+      border-left: 3px solid transparent;
+      padding: 32px;
+      transition: background 0.2s ease, border-left-color 0.2s ease,
+                  padding-left 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .pillar-card:hover {
+      background: #fff;
+      border-left-color: #8A1326;
+      padding-left: 29px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+
+    /* ── Speaker card hover ─────────────── */
+    .speaker-card {
+      background: #ECE5D5;
+      border: 1px solid #DDD3BC;
+      border-top: 3px solid transparent;
+      overflow: hidden;
+      transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .speaker-card:hover {
+      border-top-color: #8A1326;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+    .speaker-slot-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #8A1326;
+      background: transparent;
+      padding: 3px 7px;
+      border: 1px solid #8A1326;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .speaker-card:hover .speaker-slot-tag {
+      background: #8A1326;
+      color: #ECE5D5;
+    }
+
+    /* ── Schedule row hover ─────────────── */
+    .schedule-row { cursor: default; transition: background 0.15s; }
+    .schedule-row--dim { opacity: 0.5; }
+    .schedule-row:not(.schedule-row--dim):hover { background: #DDD3BC; }
+
+    /* ── Responsive ────────────────────── */
+    @media (max-width: 960px) {
+      .nav-links     { display: none !important; }
+      .nav-hamburger { display: flex !important; align-items: center; }
+
+      .nav-inner { padding: 0 24px !important; }
+
+      .hero-content  { padding: 0 24px !important; padding-top: 108px !important; padding-bottom: 48px !important; }
+      .hero-boundary { padding: 16px 24px 28px !important; }
+      .hero-headline { max-width: 100% !important; font-size: 52px !important; }
+      .hero-subline  { max-width: 100% !important; font-size: 16px !important; }
+      .hero-ctas     { flex-direction: column !important; align-items: flex-start !important; gap: 18px !important; }
+      .stat-strip    { grid-template-columns: 1fr 1fr !important; max-width: 100% !important; gap: 0 !important; }
+      .stat-strip > div:nth-child(2) { border-right: none !important; }
+      .stat-strip > div:nth-child(3) { border-right: 1px solid #DDD3BC !important; border-top: 1px solid #DDD3BC !important; padding-top: 20px !important; }
+      .stat-strip > div:nth-child(4) { border-top: 1px solid #DDD3BC !important; padding-top: 20px !important; }
+      .section-frame   { padding: 72px 24px !important; }
+      .section-pillars { padding: 80px 24px !important; }
+      .section-speakers { padding: 80px 24px !important; }
+      .section-program { padding: 80px 24px !important; }
+      .section-recap   { padding: 80px 24px !important; }
+      .section-sponsors { padding: 80px 24px !important; }
+      .section-contact { padding: 80px 24px !important; }
+      .contact-grid    { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .contact-fields  { grid-template-columns: 1fr !important; }
+      .section-venue   { padding: 80px 24px !important; }
+      .section-faq     { padding: 80px 24px !important; }
+      .section-footer-cta { padding: 80px 24px !important; }
+      .site-footer     { padding: 56px 24px 32px !important; }
+
+      .pillar-grid-top    { grid-template-columns: 1fr !important; }
+      .pillar-grid-bottom { grid-template-columns: 1fr !important; max-width: 100% !important; }
+
+      .speakers-grid  { grid-template-columns: repeat(2, 1fr) !important; }
+
+      .program-header  { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .recap-header    { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .recap-insights  { grid-template-columns: 1fr !important; }
+      .recap-photos    { grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important; height: auto !important; }
+      .recap-photos > div { grid-column: auto !important; height: 180px; }
+
+      .venue-grid  { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+
+    @media (max-width: 560px) {
+      .speakers-grid { grid-template-columns: 1fr !important; }
+      .hero-headline  { font-size: 44px !important; }
+      .recap-photos   { grid-template-columns: 1fr !important; }
+      .recap-photos > div { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="tokens.jsx"></script>
+  <script type="text/babel" src="motif.jsx"></script>
+  <script type="text/babel" src="nav.jsx"></script>
+  <script type="text/babel" src="sections-1-2.jsx"></script>
+  <script type="text/babel" src="sections-3-4.jsx"></script>
+  <script type="text/babel" src="sections-5-6.jsx"></script>
+  <script type="text/babel" src="sections-7-9.jsx"></script>
+
+  <script type="text/babel">
+    function App() {
+      return (
+        <>
+          <SiteNav />
+          <main>
+            <Hero />
+            <TheFrame />
+            <Pillars />
+            <Speakers />
+            <Program />
+            <Recap2025 />
+            <Sponsors />
+            <Venue />
+            <FAQ />
+            <Contact />
+            <FooterCTA />
+          </main>
+          <SiteFooter />
+        </>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
