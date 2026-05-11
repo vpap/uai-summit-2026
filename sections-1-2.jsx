@@ -125,7 +125,7 @@ function Hero() {
             <span style={{ width: 1, height: 48, background: T.bg2, flexShrink: 0 }}></span>
             <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
               <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
-                style={{ height: 52, width: 'auto', display: 'block', opacity: 0.55 }} />
+                style={{ height: 52, width: 'auto', display: 'block' }} />
             </a>
           </div>
         </div>
