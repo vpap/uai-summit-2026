@@ -16,7 +16,7 @@ function Hero() {
         maxWidth: 1200, margin: '0 auto', width: '100%',
         padding: '0 80px', flex: 1,
         display: 'flex', flexDirection: 'column', justifyContent: 'center',
-        paddingTop: 128, paddingBottom: 64,
+        paddingTop: 128, paddingBottom: 28,
         position: 'relative',
       }}>
 
