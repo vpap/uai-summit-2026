@@ -169,6 +169,20 @@ function TheFrame() {
           <strong style={{ fontFamily: T.display, fontWeight: 900 }}>AI</strong>{' '}
           gives European founders, researchers, and industries the tools to fix it — without waiting for policy.
         </p>
+        <hr style={{ border: 'none', borderTop: `1px solid ${T.bg2}`, margin: '36px 0' }} />
+        <p style={{
+          fontFamily: T.body,
+          fontSize: 'clamp(15px, 1.6vw, 19px)',
+          lineHeight: 1.75, color: T.txt, opacity: 0.75,
+        }}>
+          The <strong style={{ fontFamily: T.display, fontWeight: 900, opacity: 1, color: T.txt }}>MIT Universal AI Summit</strong>, co-organized by{' '}
+          <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer"
+            style={{ fontFamily: T.display, fontWeight: 900, color: T.txt, textDecoration: 'none', borderBottom: `1.5px solid ${T.txt}`, paddingBottom: 1 }}>StartSmart SEE</a>{' '}
+          and{' '}
+          <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer"
+            style={{ fontFamily: T.display, fontWeight: 900, color: T.txt, textDecoration: 'none', borderBottom: `1.5px solid ${T.txt}`, paddingBottom: 1 }}>MIT Open Learning</a>,{' '}
+          examines this thesis across five frontiers.
+        </p>
       </div>
     </section>
   );
