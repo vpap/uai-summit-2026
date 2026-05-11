@@ -118,13 +118,13 @@ function Hero() {
             CO-ORGANIZED BY
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-            <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-              <img src="assets/brand/mit-ol-black.png" alt="MIT Open Learning"
+            <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+              <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
                 style={{ height: 52, width: 'auto', display: 'block' }} />
             </a>
             <span style={{ width: 1, height: 48, background: T.bg2, flexShrink: 0 }}></span>
-            <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-              <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
+            <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+              <img src="assets/brand/mit-ol-black.png" alt="MIT Open Learning"
                 style={{ height: 52, width: 'auto', display: 'block' }} />
             </a>
           </div>

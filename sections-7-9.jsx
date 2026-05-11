@@ -453,13 +453,13 @@ function SiteFooter() {
               color: 'rgba(236,229,213,0.42)', marginBottom: 18,
             }}>ORGANIZED BY</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginBottom: 24 }}>
-              <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-                <img src="assets/brand/mit-ol-white.png" alt="MIT Open Learning"
-                  style={{ width: '100%', maxWidth: 200, height: 'auto', display: 'block', opacity: 0.7 }} />
-              </a>
               <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
                 <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
                   style={{ width: '100%', maxWidth: 200, height: 'auto', display: 'block', opacity: 0.7, filter: 'invert(1)' }} />
+              </a>
+              <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+                <img src="assets/brand/mit-ol-white.png" alt="MIT Open Learning"
+                  style={{ width: '100%', maxWidth: 200, height: 'auto', display: 'block', opacity: 0.7 }} />
               </a>
             </div>
             {/* href: replace with actual StartSmart SEE LinkedIn page URL */}
