@@ -169,7 +169,7 @@ function TheFrame() {
           <strong style={{ fontFamily: T.display, fontWeight: 900 }}>AI</strong>{' '}
           gives European founders, researchers, and industries the tools to fix it — without waiting for policy.
         </p>
-        <hr style={{ border: 'none', borderTop: `1px solid ${T.bg2}`, margin: '36px 0' }} />
+        <hr style={{ border: 'none', borderTop: '1px solid rgba(26,24,22,0.15)', margin: '36px 0' }} />
         <p style={{
           fontFamily: T.body,
           fontSize: 'clamp(15px, 1.6vw, 19px)',
