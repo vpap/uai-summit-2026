@@ -105,6 +105,30 @@ function Hero() {
             </div>
           ))}
         </div>
+
+        {/* Co-organized by */}
+        <div style={{ marginTop: 52 }}>
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 10,
+            fontFamily: T.mono, fontSize: 10,
+            letterSpacing: '0.16em', textTransform: 'uppercase',
+            color: T.txt, opacity: 0.45, marginBottom: 20,
+          }}>
+            <span style={{ width: 24, height: 1, background: 'currentColor', display: 'inline-block', flexShrink: 0 }}></span>
+            CO-ORGANIZED BY
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+            <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+              <img src="assets/brand/mit-ol-black.png" alt="MIT Open Learning"
+                style={{ height: 52, width: 'auto', display: 'block' }} />
+            </a>
+            <span style={{ width: 1, height: 48, background: T.bg2, flexShrink: 0 }}></span>
+            <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+              <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
+                style={{ height: 52, width: 'auto', display: 'block', opacity: 0.55 }} />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Boundary scale — bottom */}
