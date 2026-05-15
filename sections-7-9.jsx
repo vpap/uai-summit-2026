@@ -462,16 +462,26 @@ function SiteFooter() {
                   style={{ width: '100%', maxWidth: 200, height: 'auto', display: 'block', opacity: 0.7 }} />
               </a>
             </div>
-            {/* href: replace with actual StartSmart SEE LinkedIn page URL */}
-            <a href="https://www.linkedin.com/company/startsmartsee" target="_blank" rel="noopener noreferrer" style={{
-              fontFamily: T.mono, fontSize: 11,
-              letterSpacing: '0.1em', textTransform: 'uppercase',
-              color: 'rgba(236,229,213,0.42)', textDecoration: 'none',
-              transition: 'color 0.15s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.8)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.42)'}
-            >LINKEDIN ↗</a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <a href="https://www.linkedin.com/company/startsmartsee" target="_blank" rel="noopener noreferrer" style={{
+                fontFamily: T.mono, fontSize: 11,
+                letterSpacing: '0.1em', textTransform: 'uppercase',
+                color: 'rgba(236,229,213,0.42)', textDecoration: 'none',
+                transition: 'color 0.15s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.8)'}
+              onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.42)'}
+              >STARTSMART LINKEDIN ↗</a>
+              <a href="https://www.linkedin.com/company/mit-open-learning/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style={{
+                fontFamily: T.mono, fontSize: 11,
+                letterSpacing: '0.1em', textTransform: 'uppercase',
+                color: 'rgba(236,229,213,0.42)', textDecoration: 'none',
+                transition: 'color 0.15s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.8)'}
+              onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.42)'}
+              >MIT OPEN LEARNING ↗</a>
+            </div>
           </div>
         </div>
 
