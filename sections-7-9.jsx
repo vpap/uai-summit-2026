@@ -471,7 +471,7 @@ function SiteFooter() {
               }}
               onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.8)'}
               onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.42)'}
-              >STARTSMART LINKEDIN ↗</a>
+              >STARTSMART SEE LINKEDIN ↗</a>
               <a href="https://www.linkedin.com/company/mit-open-learning/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style={{
                 fontFamily: T.mono, fontSize: 11,
                 letterSpacing: '0.1em', textTransform: 'uppercase',
