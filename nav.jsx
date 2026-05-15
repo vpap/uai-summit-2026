@@ -49,8 +49,8 @@ function SiteNav() {
 
   const links = [
     { label: 'THESIS',   href: '#about' },
-    { label: 'SPEAKERS', href: '#speakers' },
-    { label: 'PROGRAM',  href: '#program' },
+    // { label: 'SPEAKERS', href: '#speakers' },
+    // { label: 'PROGRAM',  href: '#program' },
     { label: '2025',     href: '#recap' },
     { label: 'SPONSORS', href: '#sponsors' },
   ];
