@@ -493,14 +493,24 @@ function SiteFooter() {
           <span style={{ fontFamily: T.body, fontSize: 13, color: 'rgba(236,229,213,0.35)' }}>
             © 2026 StartSmart SEE. All rights reserved.
           </span>
-          <a href="privacy.html" style={{
-            fontFamily: T.body, fontSize: 13,
-            color: 'rgba(236,229,213,0.35)', textDecoration: 'none',
-            transition: 'color 0.15s',
-          }}
-          onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.7)'}
-          onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.35)'}
-          >Privacy Policy</a>
+          <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+            <a href="privacy.html" style={{
+              fontFamily: T.body, fontSize: 13,
+              color: 'rgba(236,229,213,0.35)', textDecoration: 'none',
+              transition: 'color 0.15s',
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.7)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.35)'}
+            >Privacy Policy</a>
+            <a href="https://accessibility.mit.edu/" target="_blank" rel="noopener noreferrer" style={{
+              fontFamily: T.body, fontSize: 13,
+              color: 'rgba(236,229,213,0.35)', textDecoration: 'none',
+              transition: 'color 0.15s',
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = 'rgba(236,229,213,0.7)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(236,229,213,0.35)'}
+            >Accessibility Notice</a>
+          </div>
         </div>
       </div>
     </footer>
