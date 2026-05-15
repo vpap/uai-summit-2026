@@ -106,27 +106,31 @@ function Hero() {
           ))}
         </div>
 
-        {/* Co-organized by */}
-        <div style={{ marginTop: 52 }}>
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: 10,
-            fontFamily: T.mono, fontSize: 10,
-            letterSpacing: '0.16em', textTransform: 'uppercase',
-            color: T.txt, opacity: 0.45, marginBottom: 20,
-          }}>
-            <span style={{ width: 24, height: 1, background: 'currentColor', display: 'inline-block', flexShrink: 0 }}></span>
-            CO-ORGANIZED BY
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 65 }}>
-            <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-              <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
-                style={{ height: 52, width: 'auto', display: 'block' }} />
-            </a>
-            <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-              <img src="assets/brand/mit-ol-black.png" alt="MIT Open Learning"
-                style={{ height: 52, width: 'auto', display: 'block' }} />
-            </a>
-          </div>
+      </div>
+
+      {/* Co-organized by — sits directly above boundary scale */}
+      <div style={{
+        maxWidth: 1200, margin: '0 auto', width: '100%',
+        padding: '0 80px 28px', position: 'relative',
+      }} className="hero-content">
+        <div style={{
+          display: 'flex', alignItems: 'center', gap: 10,
+          fontFamily: T.mono, fontSize: 10,
+          letterSpacing: '0.16em', textTransform: 'uppercase',
+          color: T.txt, opacity: 0.45, marginBottom: 20,
+        }}>
+          <span style={{ width: 24, height: 1, background: 'currentColor', display: 'inline-block', flexShrink: 0 }}></span>
+          CO-ORGANIZED BY
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 65 }}>
+          <a href="https://startsmartsee.org" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+            <img src="assets/brand/startsmart-new.png" alt="StartSmart SEE"
+              style={{ height: 52, width: 'auto', display: 'block' }} />
+          </a>
+          <a href="https://openlearning.mit.edu" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+            <img src="assets/brand/mit-ol-black.png" alt="MIT Open Learning"
+              style={{ height: 52, width: 'auto', display: 'block' }} />
+          </a>
         </div>
       </div>
 
