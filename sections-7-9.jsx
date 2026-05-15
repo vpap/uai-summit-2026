@@ -493,7 +493,7 @@ function SiteFooter() {
           <span style={{ fontFamily: T.body, fontSize: 13, color: 'rgba(236,229,213,0.35)' }}>
             © 2026 StartSmart SEE. All rights reserved.
           </span>
-          <a href="#" style={{
+          <a href="privacy.html" style={{
             fontFamily: T.body, fontSize: 13,
             color: 'rgba(236,229,213,0.35)', textDecoration: 'none',
             transition: 'color 0.15s',
