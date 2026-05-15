@@ -151,6 +151,31 @@
     }
     .contact-block a:hover { border-bottom-color: #8A1326; }
 
+    /* ── Purpose table ─────────────────────── */
+    .purpose-table {
+      width: 100%; border-collapse: collapse;
+      margin: 16px 0 8px;
+      font-size: 15px;
+    }
+    .purpose-table th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #8A1326; font-weight: 700;
+      padding: 13px 20px; text-align: left;
+      border: 1px solid #8A1326;
+      background: transparent;
+    }
+    .purpose-table td {
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px; color: rgba(26,24,22,0.78);
+      padding: 13px 20px;
+      border: 1px solid #DDD3BC;
+      vertical-align: middle;
+    }
+    .purpose-table tbody tr:hover td {
+      background: #DDD3BC;
+    }
+
     .highlight-link {
       color: #8A1326; text-decoration: none;
       border-bottom: 1px solid rgba(138,19,38,0.35);
@@ -263,13 +288,21 @@
           How We Use Your Data
         </div>
         <p>We process your personal data for the following purposes:</p>
-        <ul>
-          <li>Event registration, administration, and logistics</li>
-          <li>Sending event-related communications, updates, and practical information</li>
-          <li>Marketing communications about future events or programs (with your consent)</li>
-          <li>Safety, security, and access control at the venue</li>
-          <li>Complying with legal and regulatory obligations</li>
-        </ul>
+        <table class="purpose-table">
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Legal Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Event registration and management</td><td>Performance of a Contract</td></tr>
+            <tr><td>Communications related to the Event</td><td>Legitimate Interests</td></tr>
+            <tr><td>Sending post-Event surveys and updates</td><td>Consent or legitimate interests</td></tr>
+            <tr><td>Marketing communications (if opted in)</td><td>Consent</td></tr>
+            <tr><td>Compliance with Legal Obligations</td><td>Legal Obligations</td></tr>
+          </tbody>
+        </table>
       </div>
 
       <!-- 4 -->
