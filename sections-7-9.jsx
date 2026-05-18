@@ -221,12 +221,9 @@ function Contact() {
     if (form.organisation.trim()) payload.company = { name: form.organisation.trim() };
 
     try {
-      const res = await fetch('https://crm2030.seeders.gr/api/v1/leads', {
+      const res = await fetch('/api/submit-lead', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-Key': 'dk_live_I0Sa81vv06e1FvWUYEAfhVhu5WvQPr2A',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
       setStatus(res.ok ? 'success' : 'error');
