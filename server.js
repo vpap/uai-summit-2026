@@ -51,6 +51,7 @@ function handleLeadSubmission(req, res) {
       let responseBody = '';
       proxyRes.on('data', chunk => { responseBody += chunk; });
       proxyRes.on('end', () => {
+        console.log('DFlow response:', proxyRes.statusCode, responseBody);
         res.writeHead(proxyRes.statusCode, { 'Content-Type': 'application/json' });
         res.end(responseBody);
       });
