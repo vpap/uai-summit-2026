@@ -7,7 +7,7 @@ const PORT = 5000;
 const ROOT = __dirname;
 
 const DFLOW_API_KEY = 'dk_live_I0Sa81vv06e1FvWUYEAfhVhu5WvQPr2A';
-const DFLOW_HOST    = 'crm2030.seeders.gr';
+const DFLOW_HOST    = 'dflow.seeders.gr';
 
 const MIME = {
   '.html': 'text/html',
