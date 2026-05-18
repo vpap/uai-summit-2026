@@ -213,7 +213,7 @@ function Contact() {
     const lastName  = nameParts.slice(1).join(' ') || '';
 
     const payload = {
-      pipeline_id: 1,
+      pipeline_id: 12,
       source: 'mituai.startsmartsee.org',
       contact: { first_name: firstName, last_name: lastName, email: form.email },
       notes: form.message,
