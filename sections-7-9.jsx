@@ -207,12 +207,27 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
+
+    const nameParts = form.name.trim().split(' ');
+    const firstName = nameParts[0] || '';
+    const lastName  = nameParts.slice(1).join(' ') || '';
+
+    const payload = {
+      pipeline_id: 1,
+      source: 'mituai.startsmartsee.org',
+      contact: { first_name: firstName, last_name: lastName, email: form.email },
+      notes: form.message,
+    };
+    if (form.organisation.trim()) payload.company = { name: form.organisation.trim() };
+
     try {
-      // Replace YOUR_ENDPOINT with your Formspree form ID
-      const res = await fetch('https://formspree.io/f/YOUR_ENDPOINT', {
+      const res = await fetch('https://crm2030.seeders.gr/api/v1/leads', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...form, _subject: 'UAI Summit 2026 — Inquiry' }),
+        headers: {
+          'Content-Type': 'application/json',
+          'X-API-Key': 'dk_live_I0Sa81vv06e1FvWUYEAfhVhu5WvQPr2A',
+        },
+        body: JSON.stringify(payload),
       });
       setStatus(res.ok ? 'success' : 'error');
     } catch {
